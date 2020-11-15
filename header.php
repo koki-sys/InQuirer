@@ -64,30 +64,22 @@
 
     <nav
       class="navbar navbar-expand-lg mr-5 ml-5"
-      style="background-color: #fbfbfb;"
+      style="background-color: #fbfbfb"
     >
       <div class="collapse navbar-collapse">
         <ul class="navbar-nav mr-auto"></ul>
-        <ul class="navbar-nav mr-2 w-25">
-          <li class="nav-item w-25"></li>
-          <li class="nav-item mr-2" style="width: 30%">
+        <ul class="navbar-nav w-25">
+          <li class="nav-item mr-2 w-25">
             <a
-              class="nav-link btn btn-outline-danger text-danger"
+              class="nav-link btn btn-outline-warning text-warning"
               href="home.html"
-              >ログアウト</a
+              >新規登録</a
             >
           </li>
-          <li class="nav-item w-50">
-            <a class="nav-link btn" style="background-color: #E6E6E6;" href="">
-              <img src="img/mylibrary.svg" alt="Mylibrary">
-            </a>
-          </li>
-        </ul>
-        <ul class="navbar-nav w-25">
-          <li class="nav-item mr-2 w-50">
-            <a class="nav-link btn btn-info" href="home.html">
-              <img src="img/bookcart.svg" alt="">
-            </a>
+          <li class="nav-item mr-2 w-25">
+            <a class="nav-link btn btn-warning text-white" href="category.html"
+              >ログイン</a
+            >
           </li>
           <li class="nav-item w-50">
             <a class="nav-link btn btn-primary" href="">予約確定</a>
@@ -96,20 +88,3 @@
       </div>
     </nav>
 
-    <script
-      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-      crossorigin="anonymous"
-    ></script>
-    <script
-      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"
-      integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut"
-      crossorigin="anonymous"
-    ></script>
-    <script
-      src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"
-      integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k"
-      crossorigin="anonymous"
-    ></script>
-  </body>
-</html>
