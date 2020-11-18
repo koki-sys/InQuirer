@@ -3,12 +3,12 @@
 session_start();
 
 if (isset($_SESSION['user'])) {
-  require '../header_auth.php';
+  require '../logined_header.php';
 } else {
-  require '../header.php';
+  require '../nologin_header.php';
 }
-
 ?>
+
 <div class="container">
   <h4>現在地付近の書籍</h4>
   <div class="row">

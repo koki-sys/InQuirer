@@ -1,5 +1,5 @@
 DROP DATABASE IF EXISTS inquirer;
-CREATE DATABASE inquirer DEFAULT CHARACTER SET utf8 collate utf8_general_ci;
+CREATE DATABASE inquirer DEFAULT CHARACTER SET utf8 COLLATE utf8_general_ci;
 GRANT ALL ON inquirer.* TO 'soraisu'@'localhost' IDENTIFIED BY 'sprwAeixb26vds';
 USE inquirer;
 

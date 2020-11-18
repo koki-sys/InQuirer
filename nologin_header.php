@@ -19,7 +19,7 @@
         font-family: "Kosugi Maru", sans-serif;
       }
     </style>
-    <link rel="shortcut icon" href="../favicon.ico" />
+    <link rel="shortcut icon" href="favicon.ico" />
     <title>InQuirer 書籍貸出サイト</title>
   </head>
   <body style="background-color: #fbfbfb">
@@ -40,7 +40,7 @@
             >
           </li>
           <li class="nav-item mr-1">
-            <a class="nav-link" href="category.html">カテゴリ</a>
+            <a class="nav-link" href="category.php">カテゴリ</a>
           </li>
           <li>
             <form class="form-inline my-2 my-lg-0">
@@ -72,12 +72,12 @@
           <li class="nav-item mr-2 w-25">
             <a
               class="nav-link btn btn-outline-warning text-warning"
-              href="home.php"
+              href="register.php"
               >新規登録</a
             >
           </li>
           <li class="nav-item mr-2 w-25">
-            <a class="nav-link btn btn-warning text-white" href="category.html"
+            <a class="nav-link btn btn-warning text-white" href="login.php"
               >ログイン</a
             >
           </li>
