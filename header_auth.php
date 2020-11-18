@@ -19,7 +19,7 @@
         font-family: "Kosugi Maru", sans-serif;
       }
     </style>
-    <link rel="shortcut icon" href="favicon.ico" />
+    <link rel="shortcut icon" href="../favicon.ico" />
     <title>InQuirer 書籍貸出サイト</title>
   </head>
   <body style="background-color: #fbfbfb">
@@ -27,15 +27,15 @@
       class="navbar navbar-expand-lg navbar-light mt-3 mr-5 ml-5"
       style="background-color: #fbfbfb"
     >
-      <a href="home.html">
-        <img src="img/InQuirer.svg" alt="InQuirer" />
+      <a href="home.php">
+        <img src="../img/InQuirer.svg" alt="InQuirer" />
       </a>
 
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav mr-auto"></ul>
         <ul class="navbar-nav">
           <li class="nav-item mr-1">
-            <a class="nav-link" href="home.html"
+            <a class="nav-link" href="home.php"
               >書籍一覧<span class="sr-only">(current)</span></a
             >
           </li>
@@ -73,20 +73,20 @@
           <li class="nav-item mr-2" style="width: 30%">
             <a
               class="nav-link btn btn-outline-danger text-danger"
-              href="home.html"
+              href="home.php"
               >ログアウト</a
             >
           </li>
           <li class="nav-item w-50">
             <a class="nav-link btn" style="background-color: #E6E6E6;" href="">
-              <img src="img/mylibrary.svg" alt="Mylibrary">
+              <img src="../img/mylibrary.svg" alt="Mylibrary">
             </a>
           </li>
         </ul>
         <ul class="navbar-nav w-25">
           <li class="nav-item mr-2 w-50">
-            <a class="nav-link btn btn-info" href="home.html">
-              <img src="img/bookcart.svg" alt="">
+            <a class="nav-link btn btn-info" href="home.php">
+              <img src="../img/bookcart.svg" alt="">
             </a>
           </li>
           <li class="nav-item w-50">

@@ -1,3 +1,8 @@
 {
-  "editor.formatOnSave": true
+  "editor.formatOnSave": true,
+  "php.suggest.basic": false,
+  "php.validate.enable": false,
+  "files.associations": {
+    "*.module": "php"
+  }
 }
