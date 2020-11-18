@@ -40,7 +40,7 @@
             >
           </li>
           <li class="nav-item mr-1">
-            <a class="nav-link" href="category/index.php">カテゴリ</a>
+            <a class="nav-link" href="category.php">カテゴリ</a>
           </li>
           <li>
             <form class="form-inline my-2 my-lg-0">
