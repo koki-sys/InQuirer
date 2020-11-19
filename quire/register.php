@@ -1,3 +1,4 @@
+<?php session_start(); ?>
 <?php require '../auth_header.php'; ?>
 <div class="container bg-light border border-dark mt-5 shadow-lg" style="padding-bottom: 15%">
   <ul class="float-right" style="list-style: none;">
@@ -14,21 +15,37 @@
     <a href="login.php">サインイン</a>
     <form action="home.php" method="post">
       <div class="form-group mt-3">
-        <div class="form-row">
-          <div class="col-12 col-md-6">
-            <input type="text" name="login" placeholder="ユーザ名、又はEメール" class="form-control"><br>
-          </div>
-          <div class="col-md-6"></div>
-          <div class="col-12 col-md-6">
-            <input type="password" name="password" placeholder="パスワード" class="form-control"><br>
-          </div>
-          <div class="col-md-6"></div>
-          <div class="col-12 col-md-6">
-            <button type="submit" class="pt-2 pb-2 bg-dark text-white btn-block">サインイン</button>
-          </div>
+        <!--php-->
+        <?php
+        $name = $email = $password = '';
+        if (isset($_SESSION['user'])) {
+          $name = $_SESSION['user']['name'];
+          $email = $_SESSION['user']['email'];
+          $password = $_SESSION['user']['password'];
+        }
+        echo '<div class="col-12 col-md-6">';
+        echo '<input type="text" name="name" placeholder="ユーザ名" class="form-control"
+                  value="', $name, '"><br>';
+        echo '</div>';
+        echo '<div class="col-md-6"></div>';
+        echo '<div class="col-12 col-md-6">';
+        echo '<input type="text" name="email" placeholder="Eメール" class="form-control"
+                value="', $email, '"><br>';
+        echo '</div>';
+        echo '<div class="col-md-6"></div>';
+        echo '<div class="col-12 col-md-6">';
+        echo '<input type="password" name="password" placeholder="パスワード" class="form-control"
+                  value="', $password, '"><br>';
+        echo '</div>';
+        ?>
+        <!--php_end-->
+        <div class="col-md-6"></div>
+        <div class="col-12 col-md-6">
+          <button type="submit" class="pt-2 pb-2 bg-dark text-white btn-block">サインイン</button>
         </div>
       </div>
-    </form>
   </div>
+  </form>
+</div>
 </div>
 <?php require '../footer.php'; ?>

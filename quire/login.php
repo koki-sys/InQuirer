@@ -16,7 +16,7 @@
       <div class="form-group mt-3">
         <div class="form-row">
           <div class="col-12 col-md-6">
-            <input type="text" name="login" placeholder="ユーザ名、又はEメール" class="form-control"><br>
+            <input type="text" name="name" placeholder="ユーザ名を入力" class="form-control"><br>
           </div>
           <div class="col-md-6"></div>
           <div class="col-12 col-md-6">

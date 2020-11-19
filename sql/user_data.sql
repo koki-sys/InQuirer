@@ -1,2 +1,2 @@
 INSERT INTO user
-VALUES(1, "soraisu@example.com", "たかはし", "こうき", "ssrriiww");
+VALUES(1, "soraisu@example.com", "高橋幸暉", "ssrriiww");

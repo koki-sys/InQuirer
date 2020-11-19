@@ -6,9 +6,8 @@ USE inquirer;
 CREATE TABLE user (
   id INT AUTO_INCREMENT PRIMARY KEY,
   email CHAR(50) NOT NULL,
-  sei CHAR(10) NOT NULL,
-  mei CHAR(10) NOT NULL,
-  password VARCHAR(30) NOT NULL 
+  name VARCHAR(30) NOT NULL,
+  password VARCHAR(30) NOT NULL
 );
 
 CREATE TABLE rental (
