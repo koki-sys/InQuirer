@@ -4,7 +4,7 @@
     <div class="col-2"></div>
     <div class="col-3">
       <a href="book-index.php" class="text-dark" style="text-decoration: none;">
-        <div class="card">
+        <div class="card shadow">
           <img src="../img/book.svg" alt="貸出書籍一覧" width="256" height="128">
           <div class="card-body">
             <h5 class="card-title">貸出書籍一覧</h5>
@@ -16,7 +16,7 @@
     <div class="col-2"></div>
     <div class="col-3">
       <a href="receipt.php" class="text-dark" style="text-decoration: none;">
-        <div class="card">
+        <div class="card shadow">
           <img src="../img/receipt.svg" alt="貸出予約明細">
           <div class="card-body">
             <h5 class="card-title">貸出予約明細</h5>

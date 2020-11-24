@@ -22,9 +22,9 @@
   <?php
   if (isset($_SESSION['user'])) {
     unset($_SESSION['user']);
-    echo '<h1>ログアウトしました。</h1>';
+    echo '<h1 class="text-center mt-5">ログアウトしました。</h1>';
   } else {
-    echo '<h1>すでにログアウトしています。</h1>';
+    echo '<h1 class="text-center mt-5">すでにログアウトしています。</h1>';
   }
   ?>
   <?php require '../footer.php'; ?>

@@ -34,7 +34,10 @@ if ($referer == "http://localhost/InQuirer/quire/login.php" && isset($_POST['nam
   unset($_SESSION['user']);
   $pdo = new PDO('mysql:host=localhost;dbname=inquirer;charset=utf8', 'soraisu', 'sprwAeixb26vds');
   $sql = $pdo->prepare('select * from user where name=? and password=?');
-  $sql->execute([$_POST['name'], $_POST['password']]);
+  $sql->execute([
+    $_POST['name'],
+    $_POST['password']
+  ]);
   foreach ($sql as $row) {
     $_SESSION['user'] = [
       'id' => $row['id'],
