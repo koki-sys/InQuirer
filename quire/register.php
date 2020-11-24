@@ -24,28 +24,24 @@
           $password = $_SESSION['user']['password'];
         }
         echo '<div class="col-12 col-md-6">';
-        echo '<input type="text" name="name" placeholder="ユーザ名" class="form-control"
-                  value="', $name, '"><br>';
+        echo '<input type="text" name="name" placeholder="ユーザ名" class="form-control"><br>';
         echo '</div>';
         echo '<div class="col-md-6"></div>';
         echo '<div class="col-12 col-md-6">';
-        echo '<input type="text" name="email" placeholder="Eメール" class="form-control"
-                value="', $email, '"><br>';
+        echo '<input type="text" name="email" placeholder="Eメール" class="form-control"><br>';
         echo '</div>';
         echo '<div class="col-md-6"></div>';
         echo '<div class="col-12 col-md-6">';
-        echo '<input type="password" name="password" placeholder="パスワード" class="form-control"
-                  value="', $password, '"><br>';
+        echo '<input type="password" name="password" placeholder="パスワード" class="form-control"><br>';
         echo '</div>';
         ?>
         <!--php_end-->
         <div class="col-md-6"></div>
         <div class="col-12 col-md-6">
-          <button type="submit" class="pt-2 pb-2 bg-dark text-white btn-block">サインイン</button>
+          <input type="submit" value="サインアップ" class="pt-2 pb-2 bg-dark text-white btn-block">
         </div>
       </div>
   </div>
   </form>
-</div>
 </div>
 <?php require '../footer.php'; ?>

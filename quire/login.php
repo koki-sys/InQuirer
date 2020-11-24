@@ -24,7 +24,7 @@
           </div>
           <div class="col-md-6"></div>
           <div class="col-12 col-md-6">
-            <button type="submit" class="pt-2 pb-2 bg-dark text-white btn-block">サインイン</button>
+            <input type="submit" value="サインイン" class="pt-2 pb-2 bg-dark text-white btn-block">
           </div>
         </div>
       </div>

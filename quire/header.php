@@ -11,7 +11,7 @@ function header_notice()
   if (isset($_SESSION['user'])) {
     require '../logined_header.php';
     $notice = $_SESSION['user']['name'];
-    echo <<<EOM
+    echo <<< EOM
     <script>
       var name = <?php $notice ?>;
       alert("ようこそ" + name + "さん");
@@ -19,7 +19,7 @@ function header_notice()
     EOM;
   } else {
     require '../nologin_header.php';
-    echo <<<EOM
+    echo <<< EOM
     <script>
       alert("ログインして”);
     </script>
@@ -29,7 +29,7 @@ function header_notice()
 
 session_start();
 $referer = $_SERVER['HTTP_REFERER'] ?? '';
-if ($referer == "http://localhost/InQuirer/Quire/login.php" && isset($_POST['name'], $_POST['password'])) {
+if ($referer == "http://localhost/InQuirer/quire/login.php" && isset($_POST['name'], $_POST['password'])) {
   // ログイン処理
   unset($_SESSION['user']);
   $pdo = new PDO('mysql:host=localhost;dbname=inquirer;charset=utf8', 'soraisu', 'sprwAeixb26vds');
@@ -44,7 +44,7 @@ if ($referer == "http://localhost/InQuirer/Quire/login.php" && isset($_POST['nam
     ];
   }
   header_notice();
-} elseif ($referer == "http://localhost/InQuirer/Quire/register.php" && isset($_POST['name'], $_POST['email'], $_POST['password'])) {
+} elseif ($referer == "http://localhost/InQuirer/quire/register.php" && isset($_POST['name'], $_POST['email'], $_POST['password'])) {
   // 新規登録処理
   $pdo = new PDO('mysql:host=localhost;dbname=inquirer;charset=utf8', 'soraisu', 'sprwAeixb26vds');
 
@@ -56,6 +56,7 @@ if ($referer == "http://localhost/InQuirer/Quire/login.php" && isset($_POST['nam
     $sql = $pdo->prepare('select * from user where name=?');
     $sql->execute([$_POST['name']]);
   }
+
   if (empty($sql->fetchAll())) {
     if (isset($_SESSION['user'])) {
       $sql = $pdo->prepare('update user set name=?, email=?, password=? where id=?');
@@ -81,7 +82,10 @@ if ($referer == "http://localhost/InQuirer/Quire/login.php" && isset($_POST['nam
         $_POST['password']
       ]);
       $login = $pdo->prepare('select * from user where name=? and password=?');
-      $login->execute([$_POST['name'], $_POST['password']]);
+      $login->execute([
+        $_POST['name'],
+        $_POST['password']
+      ]);
       foreach ($login as $row) {
         $_SESSION['user'] = [
           'id' => $row['id'],
