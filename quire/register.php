@@ -2,11 +2,11 @@
 <?php require '../auth_header.php'; ?>
 <div class="container bg-light border border-dark mt-5 shadow-lg" style="padding-bottom: 15%">
   <ul class="float-right" style="list-style: none;">
-    <li><a href="home.php" class="text-dark float-right p-3 m-2">
+    <li>
+      <a href="home.php" class="text-dark float-right p-3 m-2">
         <span class="rounded-circle p-3" style="font-size: 3em;">x</span>
       </a><br>
     </li>
-    <li><img src="../img/register.png" alt="login" class="float-right" width="70%" height="70%" style="margin-top: 15%; margin-right: 25%"></li>
   </ul>
 
   <div class="ml-5" style="margin-top: 8%">
@@ -14,7 +14,7 @@
     <label class="mt-2">アカウントをお持ちの方</label>
     <a href="login.php">サインイン</a>
     <form action="home.php" method="post">
-      <div class="form-group mt-3">
+      <div class="form-group mt-5">
         <!--php-->
         <?php
         $name = $email = $password = '';
@@ -23,15 +23,12 @@
           $email = $_SESSION['user']['email'];
           $password = $_SESSION['user']['password'];
         }
+        echo '<div class="col-12 col-md-6 float-right">';
+        echo '<img src="../img/register.png" alt="login" class="mx-auto d-block" width="60%" height="60%">';
+        echo '</div>';
         echo '<div class="col-12 col-md-6">';
         echo '<input type="text" name="name" placeholder="ユーザ名" class="form-control"><br>';
-        echo '</div>';
-        echo '<div class="col-md-6"></div>';
-        echo '<div class="col-12 col-md-6">';
         echo '<input type="text" name="email" placeholder="Eメール" class="form-control"><br>';
-        echo '</div>';
-        echo '<div class="col-md-6"></div>';
-        echo '<div class="col-12 col-md-6">';
         echo '<input type="password" name="password" placeholder="パスワード" class="form-control"><br>';
         echo '</div>';
         ?>
