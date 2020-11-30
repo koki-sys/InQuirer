@@ -1,12 +1,11 @@
 <?php require 'header.php'; ?>
 <div class="container">
-  <h4>現在地付近の書籍</h4>
+  <h4>書籍一覧</h4>
   <?php
 
-  /* 本番環境でしか使えない
+  /* 本番環境でしか使えない(ipから位置情報を取得)
   function grabIpInfo($ip)
   {
-
     $curl = curl_init();
 
     curl_setopt($curl, CURLOPT_URL, "https://api.ipgeolocationapi.com/geolocate/" . $ip);
@@ -23,19 +22,24 @@
 
   ?>
   <div class="row">
-    <div class="col-0 col-md-1 col-lg-0">
-      <div class="col-md-5 col-lg-4">
-        <div class="card" style="width: 18rem;">
-          <img class="card-img-top" src="#" width="100%">
-          </img>
-          <div class="card-body">
-            <h5 class="card-title">bookTitle</h5>
-            <a href="#" class="btn btn-info mr-3">ブックカートへ</a>
-            <a href="#">書籍詳細へ</a>
-          </div>
-        </div>
-      </div>
-    </div>
+    <?php
+    require 'pdo.php';
+    $sql = $pdo->query('SELECT * FROM book');
+    foreach ($sql as $book) {
+      echo '<div class="col-md-5 col-lg-4 mt-5">';
+      echo '<div class="card shadow" style="width: 18rem;">';
+      echo '<img class="card-img-top" src="../img/book_img/', $book['img'], '" width="100%">';
+      echo '</img>';
+      echo '<div class="card-body">';
+      echo '<h5 class="card-title">', $book['name'], '</h5>';
+      echo '<a href="#" class="btn btn-info mr-3">ブックカートへ</a>';
+      echo '<a href="#">書籍詳細へ</a>';
+      echo '</div>';
+      echo '</div>';
+      echo '</div>';
+    }
+    ?>
+
   </div>
 </div>
 <?php require '../footer.php'; ?>

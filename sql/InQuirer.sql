@@ -26,8 +26,7 @@ CREATE TABLE user
   reserve_date DATE NOT NULL,
   receipt_date DATE NOT NULL,
   receipt_library_id INTEGER NOT NULL,
-  img VARCHAR
-    (50) NOT NULL,
+
   book_id INTEGER NOT NULL,
   PRIMARY KEY
     (id, user_id)
@@ -45,6 +44,8 @@ CREATE TABLE user
       (50) NOT NULL,
   isbn CHAR
       (25) NOT NULL,
+        img VARCHAR
+      (50) NOT NULL,
   library_id INTEGER NOT NULL,
   area_id INTEGER NOT NULL,
   category_id INTEGER NOT NULL
