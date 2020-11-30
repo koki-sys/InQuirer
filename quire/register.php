@@ -1,6 +1,6 @@
 <?php session_start(); ?>
 <?php require '../auth_header.php'; ?>
-<div class="container bg-light border border-dark mt-5 shadow-lg" style="padding-bottom: 15%">
+<div class="container bg-light border border-dark mt-5 shadow-lg" style="padding-bottom: 11%">
   <ul class="float-right" style="list-style: none;">
     <li>
       <a href="home.php" class="text-dark float-right p-3 m-2">
@@ -34,8 +34,8 @@
         echo '</div>';
         echo '<div class="col-12 col-md-6">';
         echo '<div class="row">';
-        echo '<div class="col-md-1"></div>';
-        echo '<div class="col-md-11">';
+        echo '<div class="col-md-2"></div>';
+        echo '<div class="col-md-10">';
         echo '<input type="text" name="name" placeholder="ユーザ名" class="form-control"><br>';
         echo '<input type="text" name="email" placeholder="Eメール" class="form-control"><br>';
         echo '<input type="password" name="password" placeholder="パスワード" class="form-control"><br>';

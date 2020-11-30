@@ -24,8 +24,8 @@
         </div>
         <div class="col-12 col-md-6">
           <div class="row">
-            <div class="col-md-1"></div>
-            <div class="col-md-11">
+            <div class="col-md-2"></div>
+            <div class="col-md-10">
               <input type="text" name="name" placeholder="ユーザ名を入力" class="form-control"><br>
               <input type="password" name="password" placeholder="パスワード" class="form-control"><br>
               <input type="submit" value="サインイン" class="pt-2 pb-2 bg-dark text-white btn-block">

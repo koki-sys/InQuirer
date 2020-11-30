@@ -27,7 +27,7 @@
       <img src="../img/InQuirer.svg" alt="InQuirer" />
     </a>
 
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <div class="collapse navbar-collapse row" id="navbarSupportedContent">
       <ul class="navbar-nav mr-auto"></ul>
       <ul class="navbar-nav">
         <li class="nav-item mr-1">
@@ -48,7 +48,7 @@
     </div>
   </nav>
 
-  <nav class="navbar navbar-expand-lg mr-5 ml-5" style="background-color: #fbfbfb">
+  <nav class="navbar navbar-expand-lg mr-5 ml-5 " style="background-color: #fbfbfb">
     <div class="collapse navbar-collapse row">
       <ul class="navbar-nav col-6"></ul>
       <ul class="navbar-nav col-6">

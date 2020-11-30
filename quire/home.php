@@ -27,8 +27,8 @@
     $sql = $pdo->query('SELECT * FROM book');
     foreach ($sql as $book) {
       echo '<div class="col-md-5 col-lg-4 mt-5">';
-      echo '<div class="card shadow" style="width: 18rem;">';
-      echo '<img class="card-img-top" src="../img/book_img/', $book['img'], '" width="100%">';
+      echo '<div class="card" style="width: 18rem;">';
+      echo '<img class="card-img-top" src="../img/book_img/', $book['img'], '">';
       echo '</img>';
       echo '<div class="card-body">';
       echo '<h5 class="card-title">', $book['name'], '</h5>';
@@ -42,4 +42,4 @@
 
   </div>
 </div>
-<?php require '../footer.php'; ?>
+<?php require '../footer_content.php'; ?>

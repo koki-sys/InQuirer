@@ -48,7 +48,7 @@
     </div>
   </nav>
 
-  <nav class="navbar navbar-expand-lg mr-5 ml-5" style="background-color: #fbfbfb;">
+  <nav class="navbar navbar-expand-lg mr-5 ml-5 sticky-top" style="background-color: #fbfbfb;">
     <div class="collapse navbar-collapse">
       <ul class="navbar-nav mr-auto"></ul>
       <ul class="navbar-nav mr-2 w-25">
