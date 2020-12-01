@@ -1,5 +1,5 @@
 <!--formを入れる-->
-<?php require 'header.php'; ?>
+<?php require '../component/header.php'; ?>
 <div class="container mt-3">
   <div class="row">
     <div class="col-5">
@@ -33,4 +33,4 @@
     </div>
   </div>
 </div>
-<?php require '../footer_content.php'; ?>
+<?php require '../component/footer_content.php'; ?>

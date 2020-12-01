@@ -23,7 +23,7 @@
   ?>
   <div class="row">
     <?php
-    require 'pdo.php';
+    require '../component/pdo.php';
     $sql = $pdo->query('SELECT * FROM book');
     foreach ($sql as $book) {
       echo '<div class="col-md-5 col-lg-4 mt-5">';
@@ -42,4 +42,4 @@
 
   </div>
 </div>
-<?php require '../footer_content.php'; ?>
+<?php require '../component/footer_content.php'; ?>
