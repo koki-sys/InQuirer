@@ -17,7 +17,7 @@
       text-decoration: none;
     }
   </style>
-  <link rel="shortcut icon" href="../favicon.ico" />
+  <link rel="shortcut icon" href="../../favicon.ico" />
   <title>InQuirer 書籍貸出サイト</title>
 </head>
 
@@ -37,8 +37,8 @@
           <a class="nav-link" href="../category/index.php">カテゴリ</a>
         </li>
         <li>
-          <form class="form-inline my-2 my-lg-0">
-            <input class="form-control mr-sm-2" type="search" placeholder="書籍名、地域を入力" aria-label="Search" />
+          <form action="../../app/search/index.php" method="post" class="form-inline my-2 my-lg-0">
+            <input type="search" class="form-control mr-sm-2" placeholder="書籍名、地域を入力" name="search" aria-label="Search" />
             <button class="btn btn-outline-success my-2 my-sm-0" type="submit">
               探す
             </button>
