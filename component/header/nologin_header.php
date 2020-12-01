@@ -54,10 +54,10 @@
       <ul class="navbar-nav col-6">
         <li class="col-lg-4 col-md-1"></li>
         <li class="nav-item col-lg-2 col-md-3 p-1">
-          <a class="nav-link btn btn-outline-warning text-warning" href="register.php">新規登録</a>
+          <a class="nav-link btn btn-outline-warning text-warning" href="./auth/register.php">新規登録</a>
         </li>
         <li class="nav-item col-lg-2 col-md-3 p-1">
-          <a class="nav-link btn btn-warning text-white" href="login.php">ログイン</a>
+          <a class="nav-link btn btn-warning text-white" href="./auth/login.php">ログイン</a>
         </li>
         <li class="nav-item col-lg-4 col-md-5 p-1">
           <a class="nav-link btn btn-primary" href="">予約確定</a>

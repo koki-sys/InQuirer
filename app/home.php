@@ -1,4 +1,4 @@
-<?php require 'header.php'; ?>
+<?php require '../component/header/header.php'; ?>
 <div class="container">
   <h4>書籍一覧</h4>
   <?php
@@ -42,4 +42,4 @@
 
   </div>
 </div>
-<?php require '../component/footer_content.php'; ?>
+<?php require '../component/footer/footer_content.php'; ?>

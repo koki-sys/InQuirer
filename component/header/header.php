@@ -9,7 +9,7 @@
 function header_notice()
 {
   if (isset($_SESSION['user'])) {
-    require '../component/logined_header.php';
+    require 'logined_header.php';
     $notice = $_SESSION['user']['name'];
     echo <<< EOM
     <script>
@@ -18,7 +18,7 @@ function header_notice()
     </script>
     EOM;
   } else {
-    require '../component/nologin_header.php';
+    require 'nologin_header.php';
     echo <<< EOM
     <script>
       alert("ログインして”);

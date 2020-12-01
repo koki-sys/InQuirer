@@ -1,7 +1,7 @@
-<?php require '../auth_header.php'; ?>
+<?php require '../../component/header/auth_header.php'; ?>
 <div class="container bg-light border border-dark mt-5 shadow-lg" style="padding-bottom: 15%">
   <ul class="float-right" style="list-style: none;">
-    <li><a href="home.php" class="text-dark float-right p-3 m-2">
+    <li><a href="../home.php" class="text-dark float-right p-3 m-2">
         <span class="rounded-circle p-3" style="font-size: 3em;">x</span>
       </a><br>
     </li>
@@ -17,10 +17,10 @@
       </div>
       <div class="col-md-5"></div>
     </div>
-    <form action="home.php" method="post">
+    <form action="../home.php" method="post">
       <div class="form-group mt-5">
         <div class="col-12 col-md-6 float-right">
-          <img src="../img/login.png" alt="login" class="mx-auto d-block" width="60%" height="60%">
+          <img src="../../img/login.png" alt="login" class="mx-auto d-block" width="60%" height="60%">
         </div>
         <div class="col-12 col-md-6">
           <div class="row">
@@ -36,4 +36,4 @@
     </form>
   </div>
 </div>
-<?php require '../footer.php'; ?>
+<?php require '../../component/footer/footer.php'; ?>
