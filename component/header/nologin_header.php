@@ -23,8 +23,8 @@
 
 <body style="background-color: #fbfbfb">
   <nav class="navbar navbar-expand-lg navbar-light mt-3 mr-5 ml-5" style="background-color: #fbfbfb">
-    <a href="home.php">
-      <img src="../img/InQuirer.svg" alt="InQuirer" />
+    <a href="../home/index.php">
+      <img src="../../img/InQuirer.svg" alt="InQuirer" />
     </a>
 
     <div class="collapse navbar-collapse row" id="navbarSupportedContent">
@@ -34,7 +34,7 @@
           <a class="nav-link" href="home.php">書籍一覧<span class="sr-only">(current)</span></a>
         </li>
         <li class="nav-item mr-1">
-          <a class="nav-link" href="category.php">カテゴリ</a>
+          <a class="nav-link" href="../category/index.php">カテゴリ</a>
         </li>
         <li>
           <form class="form-inline my-2 my-lg-0">

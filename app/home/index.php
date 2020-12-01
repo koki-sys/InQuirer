@@ -1,4 +1,4 @@
-<?php require '../component/header/header.php'; ?>
+<?php require '../../component/header/header.php'; ?>
 <div class="container">
   <h4>書籍一覧</h4>
   <?php
@@ -23,12 +23,12 @@
   ?>
   <div class="row">
     <?php
-    require '../component/pdo.php';
+    require '../../component/pdo.php';
     $sql = $pdo->query('SELECT * FROM book');
     foreach ($sql as $book) {
       echo '<div class="col-md-5 col-lg-4 mt-5">';
       echo '<div class="card" style="width: 18rem;">';
-      echo '<img class="card-img-top" src="../img/book_img/', $book['img'], '">';
+      echo '<img class="card-img-top" src="../../img/book_img/', $book['img'], '">';
       echo '</img>';
       echo '<div class="card-body">';
       echo '<h5 class="card-title">', $book['name'], '</h5>';
@@ -42,4 +42,4 @@
 
   </div>
 </div>
-<?php require '../component/footer/footer_content.php'; ?>
+<?php require '../../component/footer/footer_content.php'; ?>
