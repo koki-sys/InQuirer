@@ -3,7 +3,7 @@
 <div class="container">
   <h4>ジャンル：
     <?php
-      echo $_POST['category'];
+      echo $_POST['genre'];
     ?>
   </h4>
   <?php
@@ -29,7 +29,8 @@
   <div class="row">
     <?php
     require '../component/pdo.php';
-    $sql = $pdo->query('SELECT * FROM book');
+    $sql = $pdo->prepare('SELECT * FROM book WHERE category_id = ?');
+    $sql->execute([$_POST['genreid']]);
     foreach ($sql as $book) {
       echo '<div class="col-md-5 col-lg-4 mt-5">';
       echo '<div class="card" style="width: 18rem;">';
