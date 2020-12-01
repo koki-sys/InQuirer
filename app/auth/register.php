@@ -3,7 +3,7 @@
 <div class="container bg-light border border-dark mt-5 shadow-lg" style="padding-bottom: 11%">
   <ul class="float-right" style="list-style: none;">
     <li>
-      <a href="../home.php" class="text-dark float-right p-3 m-2">
+      <a href="../home/index.php" class="text-dark float-right p-3 m-2">
         <span class="rounded-circle p-3" style="font-size: 3em;">x</span>
       </a><br>
     </li>
