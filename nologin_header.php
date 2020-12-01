@@ -17,7 +17,7 @@
       text-decoration: none;
     }
   </style>
-  <link rel="shortcut icon" href="favicon.ico" />
+  <link rel="shortcut icon" href="../favicon.ico" />
   <title>InQuirer 書籍貸出サイト</title>
 </head>
 

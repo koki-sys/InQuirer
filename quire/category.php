@@ -1,3 +1,4 @@
+<!--formを入れる-->
 <?php require 'header.php'; ?>
 <div class="container mt-3">
   <div class="row">
@@ -7,13 +8,13 @@
           <li class="text-center list-group-item" style="list-style: none; background-color: #fbfbfb;">ジャンル
           </li>
         </strong>
-        <?php
-        $pdo = new PDO('mysql:host=localhost;dbname=inquirer;charset=utf8', 'soraisu', 'sprwAeixb26vds');
-        $sql = $pdo->query('select * from category');
-        foreach ($sql as $row) {
-          echo '<a class="text-center"><li class="list-group-item" style="background-color: #fbfbfb;">', $row['name'], '</li></a>';
-        }
-        ?>
+        <form action="genre.php" method="post">
+          <?php
+          require '../component/pdo.php';
+          $sql = $pdo->query('SELECT * FROM category ORDER BY id asc');
+          require '../component/genre.php';
+          ?>
+        </form>
       </ul>
     </div>
     <div class="col-2"></div>
@@ -22,13 +23,12 @@
         <strong>
           <li class="text-center list-group-item" style="list-style: none; background-color: #fbfbfb;">地域</li>
         </strong>
-        <?php
-        $pdo = new PDO('mysql:host=localhost;dbname=inquirer;charset=utf8', 'soraisu', 'sprwAeixb26vds');
-        $sql = $pdo->query('select * from area');
-        foreach ($sql as $row) {
-          echo '<a class="text-center"><li class="list-group-item" style="background-color: #fbfbfb;">', $row['name'], '</li></a>';
-        }
-        ?>
+          <?php
+          require '../component/pdo.php';
+          $sql = $pdo->query('SELECT * FROM area ORDER BY id asc');
+          require '../component/area.php';
+          ?>
+        </form>
       </ul>
     </div>
   </div>
