@@ -3,7 +3,7 @@
 <div class="container">
   <h4>地域：
     <?php
-      echo $_POST['area'];
+    echo $_POST['area'];
     ?>
   </h4>
   <?php
@@ -31,21 +31,20 @@
     require '../../component/pdo.php';
     $sql = $pdo->prepare('SELECT * FROM book WHERE area_id = ?');
     $sql->execute([$_POST['areaid']]);
-    foreach ($sql as $book) {
-      echo '<div class="col-md-5 col-lg-4 mt-5">';
-      echo '<div class="card" style="width: 18rem;">';
-      echo '<img class="card-img-top" src="../../img/book_img/', $book['img'], '">';
-      echo '</img>';
-      echo '<div class="card-body">';
-      echo '<h5 class="card-title">', $book['name'], '</h5>';
-      echo '<a href="#" class="btn btn-info mr-3">ブックカートへ</a>';
-      echo '<a href="#">書籍詳細へ</a>';
-      echo '</div>';
-      echo '</div>';
-      echo '</div>';
-    }
     ?>
-
+    <?php foreach ($sql as $book) : ?>
+      <div class="col-md-5 col-lg-4 mt-5">
+        <div class="card" style="width: 18rem;">
+          <img class="card-img-top" src="../../img/book_img/<?php echo $book['img']; ?>">
+          </img>
+          <div class="card-body">
+            <h5 class="card-title"><?php echo $book['name']; ?></h5>
+            <a href="#" class="btn btn-info mr-3">ブックカートへ</a>
+            <a href="#">書籍詳細へ</a>
+          </div>
+        </div>
+      </div>
+    <?php endforeach; ?>
   </div>
 </div>
 <?php require '../../component/footer/footer_content.php'; ?>
