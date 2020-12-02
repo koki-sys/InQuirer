@@ -17,7 +17,7 @@
       </div>
       <div class="col-md-5"></div>
     </div>
-    <form action="../home.php" method="post">
+    <form action="../home/index.php" method="post">
       <div class="form-group mt-5">
         <div class="col-12 col-md-6 float-right">
           <img src="../../img/login.png" alt="login" class="mx-auto d-block" width="60%" height="60%">

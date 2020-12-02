@@ -19,12 +19,10 @@
 </head>
 
 <body style="background-color: #fbfbfb">
-  <?php
-  if (isset($_SESSION['user'])) {
-    unset($_SESSION['user']);
-    echo '<h1 class="text-center mt-5">ログアウトしました。</h1>';
-  } else {
-    echo '<h1 class="text-center mt-5">すでにログアウトしています。</h1>';
-  }
-  ?>
+  <?php if (isset($_SESSION['user'])) : ?>
+    <?php unset($_SESSION['user']); ?>
+    <h1 class="text-center mt-5">ログアウトしました。</h1>
+  <?php else : ?>
+    <h1 class="text-center mt-5">すでにログアウトしています。</h1>
+  <?php endif; ?>
   <?php require '../footer.php'; ?>
