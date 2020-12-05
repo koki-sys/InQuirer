@@ -12,7 +12,7 @@ CREATE TABLE customer (
   id INT AUTO_INCREMENT PRIMARY KEY,
   name VARCHAR (30) NOT NULL,
   email CHAR (50) NOT NULL,
-  pass VARCHAR (30) NOT NULL
+  password VARCHAR (30) NOT NULL
 );
 
 CREATE TABLE rental (
@@ -20,6 +20,7 @@ CREATE TABLE rental (
   customer_id INT NOT NULL,
   reserve_date DATE NOT NULL,
   receipt_date DATE NOT NULL,
+  rental_flg INT NOT NULL DEFAULT 0,
   receipt_library_id INT NOT NULL,
   book_id INT NOT NULL,
   PRIMARY KEY (id, customer_id)

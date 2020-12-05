@@ -31,7 +31,7 @@
       <ul class="navbar-nav mr-auto"></ul>
       <ul class="navbar-nav">
         <li class="nav-item mr-1">
-          <a class="nav-link" href="home.php">書籍一覧<span class="sr-only">(current)</span></a>
+          <a class="nav-link" href="../home/index.php">書籍一覧<span class="sr-only">(current)</span></a>
         </li>
         <li class="nav-item mr-1">
           <a class="nav-link" href="../category/index.php">カテゴリ</a>
@@ -41,16 +41,14 @@
             <input type="search" class="form-control mr-sm-2" 
             placeholder="書籍名、地域を入力" name="search"
             aria-label="Search" />
-            <input class="btn btn-outline-success my-2 my-sm-0" type="submit">
-              探す
-            </button>
+            <input class="btn btn-outline-success my-2 my-sm-0" type="submit" value="探す">
           </form>
         </li>
       </ul>
     </div>
   </nav>
 
-  <nav class="navbar navbar-expand-lg mr-5 ml-5 sticky-top" style="background-color: #fbfbfb;">
+  <nav class="navbar navbar-expand-lg mr-5 ml-5" style="background-color: #fbfbfb;">
     <div class="collapse navbar-collapse">
       <ul class="navbar-nav mr-auto"></ul>
       <ul class="navbar-nav mr-2 w-25">
@@ -59,15 +57,15 @@
           <a class="nav-link btn btn-outline-danger text-danger" href="logout.php">ログアウト</a>
         </li>
         <li class="nav-item w-50">
-          <a class="nav-link btn" style="background-color: #E6E6E6;" href="mylibrary.php">
-            <img src="../img/mylibrary.svg" alt="Mylibrary">
+          <a class="nav-link btn" style="background-color: #E6E6E6;" href="../mylibrary/index.php">
+            <img src="../../img/mylibrary.svg" alt="Mylibrary">
           </a>
         </li>
       </ul>
       <ul class="navbar-nav w-25">
         <li class="nav-item mr-2 w-50">
-          <a class="nav-link btn btn-info" href="home.php">
-            <img src="../img/bookcart.svg" alt="">
+          <a class="nav-link btn btn-info" href="../bookcart/index.php">
+            <img src="../../img/bookcart.svg" alt="">
           </a>
         </li>
         <li class="nav-item w-50">

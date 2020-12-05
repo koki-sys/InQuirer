@@ -8,9 +8,9 @@
 // ログインしたかどうかによって表示するヘッダーを変える
 function header_notice()
 {
-  if (isset($_SESSION['user'])) {
+  if (isset($_SESSION['customer'])) {
     require 'logined_header.php';
-    $notice = $_SESSION['user']['name'];
+    $notice = $_SESSION['customer']['name'];
     echo <<< EOM
     <script>
       var name = <?php $notice ?>;
@@ -29,17 +29,17 @@ function header_notice()
 
 session_start();
 $referer = $_SERVER['HTTP_REFERER'] ?? '';
-if ($referer == "http://localhost/InQuirer/quire/login.php" && isset($_POST['name'], $_POST['password'])) {
+if ($referer == "http://localhost/InQuirer/app/auth/login.php" && isset($_POST['name'], $_POST['password'])) {
   // ログイン処理
-  unset($_SESSION['user']);
+  unset($_SESSION['customer']);
   $pdo = new PDO('mysql:host=localhost;dbname=inquirer;charset=utf8', 'soraisu', 'sprwAeixb26vds');
-  $sql = $pdo->prepare('select * from user where name=? and password=?');
+  $sql = $pdo->prepare('select * from customer where name=? and password=?');
   $sql->execute([
     $_POST['name'],
     $_POST['password']
   ]);
   foreach ($sql as $row) {
-    $_SESSION['user'] = [
+    $_SESSION['customer'] = [
       'id' => $row['id'],
       'name' => $row['name'],
       'email' => $row['email'],
@@ -47,29 +47,29 @@ if ($referer == "http://localhost/InQuirer/quire/login.php" && isset($_POST['nam
     ];
   }
   header_notice();
-} elseif ($referer == "http://localhost/InQuirer/quire/register.php" && isset($_POST['name'], $_POST['email'], $_POST['password'])) {
+} elseif ($referer == "http://localhost/InQuirer/app/auth/register.php" && isset($_POST['name'], $_POST['email'], $_POST['password'])) {
   // 新規登録処理
   $pdo = new PDO('mysql:host=localhost;dbname=inquirer;charset=utf8', 'soraisu', 'sprwAeixb26vds');
 
-  if (isset($_SESSION['user'])) {
-    $id = $_SESSION['user']['id'];
-    $sql = $pdo->prepare('select * from user where id=? and name=?');
+  if (isset($_SESSION['customer'])) {
+    $id = $_SESSION['customer']['id'];
+    $sql = $pdo->prepare('select * from customer where id=? and name=?');
     $sql->execute([$id, $_POST['name']]);
   } else {
-    $sql = $pdo->prepare('select * from user where name=?');
+    $sql = $pdo->prepare('select * from customer where name=?');
     $sql->execute([$_POST['name']]);
   }
 
   if (empty($sql->fetchAll())) {
-    if (isset($_SESSION['user'])) {
-      $sql = $pdo->prepare('update user set name=?, email=?, password=? where id=?');
+    if (isset($_SESSION['customer'])) {
+      $sql = $pdo->prepare('update customer set name=?, email=?, password=? where id=?');
       $sql->execute([
         $_POST['name'],
         $_POST['email'],
         $_POST['password'],
         $id
       ]);
-      $_SESSION['user'] = [
+      $_SESSION['customer'] = [
         'id' => $id,
         'name' => $_POST['name'],
         'email' => $_POST['email'],
@@ -78,19 +78,19 @@ if ($referer == "http://localhost/InQuirer/quire/login.php" && isset($_POST['nam
       echo '更新しました。';
       header_notice();
     } else {
-      $sql = $pdo->prepare('insert into user values(null,?,?,?)');
+      $sql = $pdo->prepare('insert into customer values(null,?,?,?)');
       $sql->execute([
         $_POST['name'],
         $_POST['email'],
         $_POST['password']
       ]);
-      $login = $pdo->prepare('select * from user where name=? and password=?');
+      $login = $pdo->prepare('select * from customer where name=? and password=?');
       $login->execute([
         $_POST['name'],
         $_POST['password']
       ]);
       foreach ($login as $row) {
-        $_SESSION['user'] = [
+        $_SESSION['customer'] = [
           'id' => $row['id'],
           'name' => $row['name'],
           'email' => $row['email'],
