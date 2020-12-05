@@ -3,7 +3,7 @@
   <h4>書籍一覧</h4>
   <?php
 
-  /* 本番環境でしか使えない(ipから位置情報を取得)
+  /* 本番環境でしか使えないのでコメント化(ipから位置情報を取得)
   function grabIpInfo($ip)
   {
     $curl = curl_init();
@@ -27,7 +27,7 @@
     $sql = $pdo->query('SELECT * FROM book');
     ?>
     <?php foreach ($sql as $book) : ?>
-      <div class="col-md-5 col-lg-4 mt-5">
+      <div class="col-md-6 col-lg-4 mt-5">
         <div class="card" style="width: 18rem;">
           <img class="card-img-top" src="../../img/book_img/<?php echo $book['img']; ?>">
           </img>
