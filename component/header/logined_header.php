@@ -69,7 +69,7 @@
           </a>
         </li>
         <li class="nav-item w-50">
-          <a class="nav-link btn btn-primary" href="">予約確定</a>
+          <a class="nav-link btn btn-primary" href="../reserve/add.php">予約確定</a>
         </li>
       </ul>
     </div>

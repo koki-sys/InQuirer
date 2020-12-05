@@ -60,7 +60,7 @@
           <a class="nav-link btn btn-warning text-white" href="../auth/login.php">ログイン</a>
         </li>
         <li class="nav-item col-lg-4 col-md-5 p-1">
-          <a class="nav-link btn btn-primary" href="">予約確定</a>
+          <a class="nav-link btn btn-primary" href="../reserve/add.php">予約確定</a>
         </li>
       </ul>
     </div>

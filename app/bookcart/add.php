@@ -26,9 +26,7 @@ $cartid = $_POST['cartid'] ?? '';
             <a href="../home/index.php" class="btn btn-outline-success btn-block">書籍一覧へ</a>
           </div>
           <div class="col-lg-3">
-            <form action="../reserve/add.php">
-              <input type="submit" class="btn btn-primary btn-block" value="予約確定">
-            </form>
+            <a href="../reserve/add.php" class="btn btn-primary btn-block">予約確定</a>
           </div>
           <div class="col-lg-6"></div>
         </div>
@@ -36,23 +34,23 @@ $cartid = $_POST['cartid'] ?? '';
     </div>
     <h6 class="mt-3">ブックカートに入っているもの</h6>
     <div class="row">
-    <?php
-    $index = $pdo->prepare('SELECT * FROM rental WHERE customer_id = ? AND rental_flg = 0');
-    $index->execute([$_SESSION['customer']['id']]);
-    foreach ($index as $rental2) {
-      $bookimg = $pdo->prepare('SELECT * FROM book WHERE id = ?');
-      $bookimg->execute([$rental2['book_id']]);
-      foreach ($bookimg as $img) {
-        echo '<div class="col-2 m-2">';
-        echo '<img src="../../img/book_img/', $img['img'], '" alt="img">';
-        echo '</div>';
+      <?php
+      $index = $pdo->prepare('SELECT * FROM rental WHERE customer_id = ? AND rental_flg = 0');
+      $index->execute([$_SESSION['customer']['id']]);
+      foreach ($index as $rental2) {
+        $bookimg = $pdo->prepare('SELECT * FROM book WHERE id = ?');
+        $bookimg->execute([$rental2['book_id']]);
+        foreach ($bookimg as $img) {
+          echo '<div class="col-2 m-2">';
+          echo '<img src="../../img/book_img/', $img['img'], '" alt="img">';
+          echo '</div>';
+        }
       }
-    }
-    ?>
+      ?>
     </div>
   </div>
 
 <?php else : ?>
   <?php header('Location: http://localhost/InQuirer/app/auth/login.php'); ?>
 <?php endif; ?>
-<?php require '../../component/footer/footer_content.php'; ?>
+<?php require '../../component/footer/footer.php'; ?>

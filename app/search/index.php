@@ -31,4 +31,4 @@
     <p>🔎書籍名の中に含まれるキーワードで探してみる。</p>
   <?php endif; ?>
 </div>
-<?php require '../../component/footer/footer_content.php'; ?>
+<?php require '../../component/footer/footer.php'; ?>
