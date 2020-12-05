@@ -4,7 +4,7 @@ DEFAULT CHARACTER
 SET utf8
 COLLATE utf8_general_ci;
 GRANT ALL ON inquirer.* TO 'soraisu'@'localhost' IDENTIFIED BY 'sprwAeixb26vds';
-USE inquirer;
+use inquirer;
 
 CREATE TABLE user
 (
