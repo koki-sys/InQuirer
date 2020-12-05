@@ -18,6 +18,7 @@ CREATE TABLE customer (
 CREATE TABLE rental (
   id INT AUTO_INCREMENT,
   customer_id INT NOT NULL,
+  random VARCHAR(9) NOT NULL,
   reserve_date DATE NOT NULL,
   receipt_date DATE NOT NULL,
   rental_flg INT NOT NULL DEFAULT 0,

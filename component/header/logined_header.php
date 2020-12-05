@@ -54,7 +54,7 @@
       <ul class="navbar-nav mr-2 w-25">
         <li class="nav-item w-25"></li>
         <li class="nav-item mr-2" style="width: 40%">
-          <a class="nav-link btn btn-outline-danger text-danger" href="logout.php">ログアウト</a>
+          <a class="nav-link btn btn-outline-danger text-danger" href="../auth/logout.php">ログアウト</a>
         </li>
         <li class="nav-item w-50">
           <a class="nav-link btn" style="background-color: #E6E6E6;" href="../mylibrary/index.php">

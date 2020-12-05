@@ -14,15 +14,15 @@
     }
   </style>
   <link rel="shortcut icon" href="favicon.ico" />
-  <meta http-equiv="refresh" content="1; url=home.php">
+  <meta http-equiv="refresh" content="1; url=../home/index.php">
   <title>InQuirer 書籍貸出サイト</title>
 </head>
 
 <body style="background-color: #fbfbfb">
-  <?php if (isset($_SESSION['user'])) : ?>
-    <?php unset($_SESSION['user']); ?>
+  <?php if (isset($_SESSION['customer'])) : ?>
+    <?php unset($_SESSION['customer']); ?>
     <h1 class="text-center mt-5">ログアウトしました。</h1>
   <?php else : ?>
     <h1 class="text-center mt-5">すでにログアウトしています。</h1>
   <?php endif; ?>
-  <?php require '../footer.php'; ?>
+  <?php require '../../component/footer/footer.php'; ?>
