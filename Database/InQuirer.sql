@@ -55,24 +55,44 @@ CREATE TABLE library (
 ALTER TABLE
   rental
 ADD
-  CONSTRAINT book_id foreign key(book_id) references book(id);
+  CONSTRAINT book_id foreign key(book_id) references book(id) on
+delete
+  cascade on
+update
+  cascade;
 
 ALTER TABLE
   rental
 ADD
-  CONSTRAINT customer_id foreign key(customer_id) references customer(id);
+  CONSTRAINT customer_id foreign key(customer_id) references customer(id) on
+delete
+  cascade on
+update
+  cascade;
 
 ALTER TABLE
   book
 ADD
-  CONSTRAINT library_id foreign key(library_id) references library(id);
+  CONSTRAINT library_id foreign key(library_id) references library(id) on
+delete
+  cascade on
+update
+  cascade;
 
 ALTER TABLE
   book
 ADD
-  CONSTRAINT area_id foreign key(area_id) references area(id);
+  CONSTRAINT area_id foreign key(area_id) references area(id) on
+delete
+  cascade on
+update
+  cascade;
 
 ALTER TABLE
   book
 ADD
-  CONSTRAINT category_id foreign key(category_id) references category(id);
+  CONSTRAINT category_id foreign key(category_id) references category(id) on
+delete
+  cascade on
+update
+  cascade;

@@ -1,4 +1,5 @@
-INSERT INTO library
+INSERT INTO
+  library
 VALUES
   /* 九州・沖縄->8 */
   (1, "久留米市立中央図書館"),
