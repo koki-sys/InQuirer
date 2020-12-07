@@ -4,6 +4,7 @@
   <a href="index.php">
     ＜＜ Myライブラリへ</a>
   <h4 class="mt-5 ml-5">貸出書籍一覧</h4>
+  <?php require '../../component/book/rmaxcnt.php'; ?>
   <div class="row ml-5 mt-3">
     <?php
     $index = $pdo->prepare('SELECT * FROM rental WHERE customer_id = ? AND rental_flg = 1');

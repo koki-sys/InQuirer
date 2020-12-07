@@ -1,5 +1,6 @@
 <?php require '../../component/header/header.php'; ?>
 <?php require '../../component/pdo.php'; ?>
+<?php require '../../component/book/cmaxcnt.php'; ?>
 <div class="container mt-5">
   <div class="row">
     <div class="col-lg-2">

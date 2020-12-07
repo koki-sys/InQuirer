@@ -5,7 +5,10 @@
   $anum = mt_rand(100, 999);
   $bnum = mt_rand(100, 999);
   $cnum = mt_rand(100, 999);
-  $rnum = $anum.$bnum.$cnum;
+  $rnum = $anum . $bnum . $cnum;
+  ?>
+  <?php require '../../component/book/rmaxcnt.php'; ?>
+  <?php
   $reserve = $pdo->prepare('UPDATE rental SET random = ?, rental_flg = 1 WHERE customer_id = ?');
   $reserve->execute([$rnum, $_SESSION['customer']['id']]);
 
@@ -13,6 +16,9 @@
   $info->execute([$rnum, $_SESSION['customer']['id']]);
   ?>
   <?php foreach ($info as $row) : ?>
+
+
+    }
     <?php
     $lib = $pdo->prepare('SELECT * FROM library WHERE id = ?');
     $lib->execute([$row['receipt_library_id']]);
@@ -25,6 +31,9 @@
         <div class="col-lg-2">
           <a href="../home/index.php" class="btn btn-outline-success btn-block">書籍一覧へ</a>
         </div>
+      </div>
+      <div class="row ml-1">
+        <p class="text-danger mt-1">予約IDをメモして、貸出時に司書にお伝えください</p>
       </div>
       <div class="row mt-5">
         <div class="col-lg-3">

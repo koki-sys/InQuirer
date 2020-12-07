@@ -6,6 +6,7 @@ $nowdate = date("Y/m/d");
 $recdate = date("Y/m/d", strtotime("+2 day"));
 $cartid = $_POST['cartid'] ?? '';
 ?>
+<?php require '../../component/book/cmaxcnt.php'; ?>
 <?php if (isset($_SESSION['customer']) && $cartid != null) : ?>
   <?php
   $booksql = $pdo->prepare('SELECT * FROM book WHERE id = ?');
@@ -37,7 +38,6 @@ $cartid = $_POST['cartid'] ?? '';
       <?php require '../../component/book/bookcart.php'; ?>
     </div>
   </div>
-
 <?php else : ?>
   <?php header('Location: http://localhost/InQuirer/app/auth/login.php'); ?>
 <?php endif; ?>
