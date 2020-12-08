@@ -18,7 +18,7 @@
 * GitHubCLI：`gh repo clone koki-sys/InQuirer`
 
 `component/component.php`を開き
-その中にあるコードを`app/[folder]/[file].php`内に保存して開発を進めてください。
+その中にあるコードを`app/[folder]/[file].php`内に埋め込み、開発を進めてください。
 
 ## お問い合わせ
 追加してほしい機能、不具合などに関しましては以下の連絡先にお問い合わせください。<br>
