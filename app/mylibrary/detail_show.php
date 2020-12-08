@@ -1,7 +1,7 @@
 <?php require '../../component/header/header.php'; ?>
 <?php require '../../component/pdo.php'; ?>
 <?php
-$date = $_POST['detail'] ?? '';
+$date = htmlspecialchars($_POST['detail']) ?? '';
 $backd = '';
 $resv_show = $pdo->prepare('SELECT * FROM rental WHERE customer_id = ? AND reserve_date =? AND rental_flg=1');
 $resv_show->execute([$_SESSION['customer']['id'], $date]);

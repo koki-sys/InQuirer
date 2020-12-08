@@ -4,7 +4,7 @@
 date_default_timezone_set('Asia/Tokyo');
 $nowdate = date("Y/m/d");
 $recdate = date("Y/m/d", strtotime("+2 day"));
-$cartid = $_POST['cartid'] ?? '';
+$cartid = htmlspecialchars($_POST['cartid']) ?? '';
 ?>
 <?php require '../../component/book/cmaxcnt.php'; ?>
 <?php if (isset($_SESSION['customer']) && $cartid != null) : ?>

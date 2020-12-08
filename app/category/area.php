@@ -3,7 +3,7 @@
 <div class="container">
   <h4>地域：
     <?php
-    echo $_POST['area'];
+    echo htmlspecialchars($_POST['area']);
     ?>
   </h4>
   <?php
@@ -30,7 +30,7 @@
     <?php
     require '../../component/pdo.php';
     $sql = $pdo->prepare('SELECT * FROM book WHERE area_id = ?');
-    $sql->execute([$_POST['areaid']]);
+    $sql->execute([htmlspecialchars($_POST['areaid'])]);
     ?>
     <?php require '../../component/book/card.php'; ?>
   </div>

@@ -3,7 +3,7 @@
 <div class="container">
   <h4>ジャンル：
     <?php
-    echo $_POST['genre'];
+    echo htmlspecialchars($_POST['genre']);
     ?>
   </h4>
   <?php
@@ -30,7 +30,7 @@
     <?php
     require '../../component/pdo.php';
     $sql = $pdo->prepare('SELECT * FROM book WHERE category_id = ?');
-    $sql->execute([$_POST['genreid']]);
+    $sql->execute([htmlspecialchars($_POST['genreid'])]);
     ?>
     <?php require '../../component/book/card.php'; ?>
   </div>

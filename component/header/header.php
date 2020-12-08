@@ -29,14 +29,14 @@ function header_notice()
 
 session_start();
 $referer = $_SERVER['HTTP_REFERER'] ?? '';
-if ($referer == "http://localhost/InQuirer/app/auth/login.php" && isset($_POST['name'], $_POST['password'])) {
+if ($referer == "http://localhost/InQuirer/app/auth/login.php" && isset(htmlspecialchars($_POST['name']), htmlspecialchars($_POST['password']))) {
   // ログイン処理
   unset($_SESSION['customer']);
   $pdo = new PDO('mysql:host=localhost;dbname=inquirer;charset=utf8', 'soraisu', 'sprwAeixb26vds');
   $sql = $pdo->prepare('select * from customer where name=? and password=?');
   $sql->execute([
-    $_POST['name'],
-    $_POST['password']
+    htmlspecialchars($_POST['name']),
+    htmlspecialchars($_POST['password']
   ]);
   foreach ($sql as $row) {
     $_SESSION['customer'] = [
@@ -47,47 +47,47 @@ if ($referer == "http://localhost/InQuirer/app/auth/login.php" && isset($_POST['
     ];
   }
   header_notice();
-} elseif ($referer == "http://localhost/InQuirer/app/auth/register.php" && isset($_POST['name'], $_POST['email'], $_POST['password'])) {
+} elseif ($referer == "http://localhost/InQuirer/app/auth/register.php" && isset(htmlspecialchars($_POST['name']), htmlspecialchars($_POST['email']), htmlspecialchars($_POST['password']))) {
   // 新規登録処理
   $pdo = new PDO('mysql:host=localhost;dbname=inquirer;charset=utf8', 'soraisu', 'sprwAeixb26vds');
 
   if (isset($_SESSION['customer'])) {
     $id = $_SESSION['customer']['id'];
     $sql = $pdo->prepare('select * from customer where id=? and name=?');
-    $sql->execute([$id, $_POST['name']]);
+    $sql->execute([$id, htmlspecialchars($_POST['name'])]);
   } else {
     $sql = $pdo->prepare('select * from customer where name=?');
-    $sql->execute([$_POST['name']]);
+    $sql->execute([htmlspecialchars($_POST['name'])]);
   }
 
   if (empty($sql->fetchAll())) {
     if (isset($_SESSION['customer'])) {
       $sql = $pdo->prepare('update customer set name=?, email=?, password=? where id=?');
       $sql->execute([
-        $_POST['name'],
-        $_POST['email'],
-        $_POST['password'],
+        htmlspecialchars($_POST['name']),
+        htmlspecialchars($_POST['email']),
+        htmlspecialchars($_POST['password']),
         $id
       ]);
       $_SESSION['customer'] = [
         'id' => $id,
-        'name' => $_POST['name'],
-        'email' => $_POST['email'],
-        'password' => $_POST['password']
+        'name' => htmlspecialchars($_POST['name']),
+        'email' => htmlspecialchars($_POST['email']),
+        'password' => htmlspecialchars($_POST['password'])
       ];
       echo '更新しました。';
       header_notice();
     } else {
       $sql = $pdo->prepare('insert into customer values(null,?,?,?)');
       $sql->execute([
-        $_POST['name'],
-        $_POST['email'],
-        $_POST['password']
+        htmlspecialchars($_POST['name']),
+        htmlspecialchars($_POST['email']),
+        htmlspecialchars($_POST['password'])
       ]);
       $login = $pdo->prepare('select * from customer where name=? and password=?');
       $login->execute([
-        $_POST['name'],
-        $_POST['password']
+        htmlspecialchars($_POST['name']),
+        htmlspecialchars($_POST['password'])
       ]);
       foreach ($login as $row) {
         $_SESSION['customer'] = [

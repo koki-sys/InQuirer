@@ -1,13 +1,13 @@
 <?php require '../../component/header/header.php'; ?>
 <div class="container">
   <?php
-  $name = $_POST['search'];
+  $name = htmlspecialchars($_POST['search']);
   require '../../component/pdo.php';
   $searchsql = $pdo->prepare('SELECT b.id, b.name, b.img FROM book b LEFT OUTER JOIN area a ON b.area_id = a.id WHERE b.name LIKE ? OR a.name LIKE ?');
   $searchsql->execute(['%' . $name . '%', '%' . $name . '%']);
   ?>
-  <?php if (($_POST['search']) != null) : ?>
-    <h4>「<?php echo $_POST['search']; ?>」の検索結果</h4>
+  <?php if ((htmlspecialchars($_POST['search'])) != null) : ?>
+    <h4>「<?php echo htmlspecialchars($_POST['search']); ?>」の検索結果</h4>
     <div class="row">
       <?php foreach ($searchsql as $search) : ?>
         <div class="col-md-6 col-lg-4 mt-5">
