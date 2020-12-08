@@ -3,8 +3,8 @@
   <?php
   $name = $_POST['search'];
   require '../../component/pdo.php';
-  $searchsql = $pdo->prepare('SELECT * FROM book WHERE name LIKE ?');
-  $searchsql->execute(['%' . $name . '%']);
+  $searchsql = $pdo->prepare('SELECT b.id, b.name, b.img FROM book b LEFT OUTER JOIN area a ON b.area_id = a.id WHERE b.name LIKE ? OR a.name LIKE ?');
+  $searchsql->execute(['%' . $name . '%', '%' . $name . '%']);
   ?>
   <?php if (($_POST['search']) != null) : ?>
     <h4>「<?php echo $_POST['search']; ?>」の検索結果</h4>
