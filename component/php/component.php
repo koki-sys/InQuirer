@@ -1,19 +1,23 @@
-<!-- component/header -->
-<?php require '../../component/header/header.php'; ?>
-<?php require '../../component/header/auth_header.php'; ?>
-<?php require '../../component/header/logined_header.php'; ?>
-<?php require '../../component/header/nologin_header.php'; ?>
+<!-- これはコンポーネント一覧です これを埋め込んで開発を進めてください。-->
 
-<!-- component/footer -->
-<?php require '../../component/footer/footer.php'; ?>
+<!-- component/php/header ヘッダー -->
+<?php require '../../component/php/header/header.php'; ?>
+<?php require '../../component/php/header/auth_header.php'; ?>
+<?php require '../../component/php/header/logined_header.php'; ?>
+<?php require '../../component/php/header/nologin_header.php'; ?>
 
-<!-- component/book -->
-<?php require '../../component/book/bookcart.php'; ?>
-<?php require '../../component/book/card.php'; ?>
+<!-- component/php/footer フッター -->
+<?php require '../../component/php/footer/footer.php'; ?>
 
-<!-- component/category -->
-<?php require '../../component/category/area.php'; ?>
-<?php require '../../component/category/genre.php'; ?>
+<!-- component/php/book 書籍関係（予約数、カート数、書籍一覧のカード、カートに入っているか） -->
+<?php require '../../component/php/book/bookcart.php'; ?>
+<?php require '../../component/php/book/card.php'; ?>
+<?php require '../../component/php/book/cmaxcnt.php'; ?>
+<?php require '../../component/php/book/rmaxcnt.php'; ?>
 
-<!-- pdo -->
-<?php require '../../component/pdo.php'; ?>
+<!-- component/php/category カテゴリ関係 -->
+<?php require '../../component/php/category/area.php'; ?>
+<?php require '../../component/php/category/genre.php'; ?>
+
+<!-- component/php/pdo.php データベース接続 -->
+<?php require '../../component/php/pdo.php'; ?>

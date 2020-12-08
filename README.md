@@ -17,7 +17,7 @@
 * Git（SSL）：`git clone git@github.com:koki-sys/InQuirer.git`
 * GitHubCLI：`gh repo clone koki-sys/InQuirer`
 
-`component/component.php`を開き
+`component/php/component.php`を開き
 その中にあるコードを`app/[folder]/[file].php`内に埋め込み、開発を進めてください。
 
 ## お問い合わせ
