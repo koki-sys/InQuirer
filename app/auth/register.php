@@ -1,5 +1,5 @@
 <?php session_start(); ?>
-<?php require '../../component/header/auth_header.php'; ?>
+<?php require '../../component/php/header/auth_header.php'; ?>
 <div class="container bg-light border border-dark mt-5 shadow-lg" style="padding-bottom: 11%">
   <ul class="float-right" style="list-style: none;">
     <li>
@@ -48,4 +48,4 @@
   </div>
 </div>
 </div>
-<?php require '../../component/footer/footer.php'; ?>
+<?php require '../../component/php/footer/footer.php'; ?>

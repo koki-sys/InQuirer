@@ -1,5 +1,5 @@
-<?php require '../../component/header/header.php'; ?>
-<?php require '../../component/pdo.php'; ?>
+<?php require '../../component/php/header/header.php'; ?>
+<?php require '../../component/php/pdo.php'; ?>
 <?php $sql = $pdo->query('SELECT * FROM book'); ?>
 <div class="container">
   <h4>書籍一覧</h4>
@@ -22,7 +22,7 @@
   */
   ?>
   <div class="row">
-    <?php require '../../component/book/card.php'; ?>
+    <?php require '../../component/php/book/card.php'; ?>
   </div>
 </div>
-<?php require '../../component/footer/footer.php'; ?>
+<?php require '../../component/php/footer/footer.php'; ?>

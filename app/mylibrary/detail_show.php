@@ -1,5 +1,5 @@
-<?php require '../../component/header/header.php'; ?>
-<?php require '../../component/pdo.php'; ?>
+<?php require '../../component/php/header/header.php'; ?>
+<?php require '../../component/php/pdo.php'; ?>
 <?php
 $date = htmlspecialchars($_POST['detail']) ?? '';
 $backd = '';
@@ -65,4 +65,4 @@ $lib = $pdo->prepare('SELECT * FROM library WHERE id = ?');
     <?php endif; ?>
   <?php endforeach; ?>
 </div>
-<?php require '../../component/footer/footer.php'; ?>
+<?php require '../../component/php/footer/footer.php'; ?>

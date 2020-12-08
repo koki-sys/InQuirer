@@ -25,4 +25,4 @@
   <?php else : ?>
     <h1 class="text-center mt-5">すでにログアウトしています。</h1>
   <?php endif; ?>
-  <?php require '../../component/footer/footer.php'; ?>
+  <?php require '../../component/php/footer/footer.php'; ?>

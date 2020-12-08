@@ -1,4 +1,4 @@
-<?php require '../../component/header/auth_header.php'; ?>
+<?php require '../../component/php/header/auth_header.php'; ?>
 <div class="container bg-light border border-dark mt-5 shadow-lg" style="padding-bottom: 15%">
   <ul class="float-right" style="list-style: none;">
     <li><a href="../home/index.php" class="text-dark float-right p-3 m-2">
@@ -36,4 +36,4 @@
     </form>
   </div>
 </div>
-<?php require '../../component/footer/footer.php'; ?>
+<?php require '../../component/php/footer/footer.php'; ?>

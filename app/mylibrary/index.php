@@ -1,5 +1,5 @@
-<?php require '../../component/header/header.php'; ?>
-<?php require '../../component/pdo.php'; ?>
+<?php require '../../component/php/header/header.php'; ?>
+<?php require '../../component/php/pdo.php'; ?>
 <div class="container">
   <h4>Myライブラリ</h4>
   <div class="row mt-3">
@@ -36,4 +36,4 @@
     <div class="col-lg-2"></div>
   </div>
 </div>
-<?php require '../../component/footer/footer.php'; ?>
+<?php require '../../component/php/footer/footer.php'; ?>

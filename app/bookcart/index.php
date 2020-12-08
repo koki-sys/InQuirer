@@ -1,8 +1,8 @@
-<?php require '../../component/header/header.php'; ?>
-<?php require '../../component/pdo.php'; ?>
+<?php require '../../component/php/header/header.php'; ?>
+<?php require '../../component/php/pdo.php'; ?>
 
 <div class="container mt-5">
-  <?php require '../../component/book/cmaxcnt.php'; ?>
+  <?php require '../../component/php/book/cmaxcnt.php'; ?>
   <div class="row">
     <div class="col-lg-2">
       <h4 class="float-left">ブックカート</h4>
@@ -13,7 +13,7 @@
   </div>
   <h6 class="mt-3">ブックカートに入っているもの</h6>
   <div class="row">
-    <?php require '../../component/book/bookcart.php'; ?>
+    <?php require '../../component/php/book/bookcart.php'; ?>
   </div>
 </div>
-<?php require '../../component/footer/footer.php'; ?>
+<?php require '../../component/php/footer/footer.php'; ?>

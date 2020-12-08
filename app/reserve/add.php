@@ -1,5 +1,5 @@
-<?php require '../../component/header/header.php'; ?>
-<?php require '../../component/pdo.php'; ?>
+<?php require '../../component/php/header/header.php'; ?>
+<?php require '../../component/php/pdo.php'; ?>
 <div class="container">
   <?php if (isset($_SESSION['customer'])) : ?>
     <?php
@@ -9,7 +9,7 @@
     $rnum = $anum . $bnum . $cnum;
     ?>
     <div class="row">
-      <?php require '../../component/book/cmaxcnt.php'; ?>
+      <?php require '../../component/php/book/cmaxcnt.php'; ?>
     </div>
     <?php
     $reserve = $pdo->prepare('UPDATE rental SET random = ?, rental_flg = 1 WHERE customer_id = ?');
@@ -80,4 +80,4 @@
     <?php header('Location: http://localhost/InQuirer/app/auth/login.php'); ?>
   <?php endif; ?>
 </div>
-<?php require '../../component/footer/footer.php'; ?>
+<?php require '../../component/php/footer/footer.php'; ?>

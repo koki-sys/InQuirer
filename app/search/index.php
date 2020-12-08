@@ -1,4 +1,4 @@
-<?php require '../../component/header/header.php'; ?>
+<?php require '../../component/php/header/header.php'; ?>
 <div class="container">
   <?php
   $name = htmlspecialchars($_POST['search']);
@@ -39,4 +39,4 @@
     <p>🔎書籍名の中に含まれるキーワードで探してみる。</p>
   <?php endif; ?>
 </div>
-<?php require '../../component/footer/footer.php'; ?>
+<?php require '../../component/php/footer/footer.php'; ?>

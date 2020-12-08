@@ -1,5 +1,5 @@
 <!-- bookテーブルからとる -->
-<?php require '../../component/header/header.php'; ?>
+<?php require '../../component/php/header/header.php'; ?>
 <div class="container">
   <h4>ジャンル：
     <?php
@@ -28,11 +28,11 @@
   ?>
   <div class="row">
     <?php
-    require '../../component/pdo.php';
+    require '../../component/php/pdo.php';
     $sql = $pdo->prepare('SELECT * FROM book WHERE category_id = ?');
     $sql->execute([htmlspecialchars($_POST['genreid'])]);
     ?>
-    <?php require '../../component/book/card.php'; ?>
+    <?php require '../../component/php/book/card.php'; ?>
   </div>
 </div>
-<?php require '../../component/footer/footer.php'; ?>
+<?php require '../../component/php/footer/footer.php'; ?>

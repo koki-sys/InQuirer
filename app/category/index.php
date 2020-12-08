@@ -1,5 +1,5 @@
 <!--formを入れる-->
-<?php require '../../component/header/header.php'; ?>
+<?php require '../../component/php/header/header.php'; ?>
 <div class="container mt-3">
   <div class="row">
     <div class="col-5">
@@ -10,9 +10,9 @@
         </strong>
         <form action="genre.php" method="post">
           <?php
-          require '../../component/pdo.php';
+          require '../../component/php/pdo.php';
           $sql = $pdo->query('SELECT * FROM category ORDER BY id asc');
-          require '../../component/category/genre.php';
+          require '../../component/php/category/genre.php';
           ?>
         </form>
       </ul>
@@ -24,13 +24,13 @@
           <li class="text-center list-group-item" style="list-style: none; background-color: #fbfbfb;">地域</li>
         </strong>
           <?php
-          require '../../component/pdo.php';
+          require '../../component/php/pdo.php';
           $sql = $pdo->query('SELECT * FROM area ORDER BY id asc');
-          require '../../component/category/area.php';
+          require '../../component/php/category/area.php';
           ?>
         </form>
       </ul>
     </div>
   </div>
 </div>
-<?php require '../../component/footer/footer.php'; ?>
+<?php require '../../component/php/footer/footer.php'; ?>

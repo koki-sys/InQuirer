@@ -54,22 +54,22 @@
       <ul class="navbar-nav mr-2 w-25">
         <li class="nav-item w-25"></li>
         <li class="nav-item mr-2" style="width: 40%">
-          <a class="nav-link btn btn-outline-danger text-danger" href="../auth/logout.php">ログアウト</a>
+          <a class="nav-link btn btn-outline-danger text-danger shadow-sm" href="../auth/logout.php">ログアウト</a>
         </li>
         <li class="nav-item w-50">
-          <a class="nav-link btn" style="background-color: #E6E6E6;" href="../mylibrary/index.php">
+          <a class="nav-link btn shadow-sm" style="background-color: #E6E6E6;" href="../mylibrary/index.php">
             <img src="../../img/mylibrary.svg" alt="Mylibrary">
           </a>
         </li>
       </ul>
       <ul class="navbar-nav w-25">
         <li class="nav-item mr-2 w-50">
-          <a class="nav-link btn btn-info" href="../bookcart/index.php">
+          <a class="nav-link btn btn-info shadow-sm" href="../bookcart/index.php">
             <img src="../../img/bookcart.svg" alt="">
           </a>
         </li>
         <li class="nav-item w-50">
-          <a class="nav-link btn btn-primary" href="../reserve/add.php">予約確定</a>
+          <a class="nav-link btn btn-primary shadow-sm" href="../reserve/add.php">予約確定</a>
         </li>
       </ul>
     </div>

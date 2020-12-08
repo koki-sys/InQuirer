@@ -1,10 +1,10 @@
-<?php require '../../component/header/header.php'; ?>
-<?php require '../../component/pdo.php'; ?>
+<?php require '../../component/php/header/header.php'; ?>
+<?php require '../../component/php/pdo.php'; ?>
 <div class="container">
   <a href="index.php">
     ＜＜ Myライブラリへ</a>
   <h4 class="mt-5 ml-5">貸出書籍一覧</h4>
-  <?php require '../../component/book/rmaxcnt.php'; ?>
+  <?php require '../../component/php/book/rmaxcnt.php'; ?>
   <div class="row ml-5 mt-3">
     <?php
     $index = $pdo->prepare('SELECT * FROM rental WHERE customer_id = ? AND rental_flg = 1');
@@ -21,4 +21,4 @@
     ?>
   </div>
 </div>
-<?php require '../../component/footer/footer.php'; ?>
+<?php require '../../component/php/footer/footer.php'; ?>

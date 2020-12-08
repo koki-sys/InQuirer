@@ -29,14 +29,14 @@ function header_notice()
 
 session_start();
 $referer = $_SERVER['HTTP_REFERER'] ?? '';
-if ($referer == "http://localhost/InQuirer/app/auth/login.php" && isset(htmlspecialchars($_POST['name']), htmlspecialchars($_POST['password']))) {
+if ($referer == "http://localhost/InQuirer/app/auth/login.php" && isset($_POST['name'], $_POST['password'])){
   // ログイン処理
   unset($_SESSION['customer']);
   $pdo = new PDO('mysql:host=localhost;dbname=inquirer;charset=utf8', 'soraisu', 'sprwAeixb26vds');
   $sql = $pdo->prepare('select * from customer where name=? and password=?');
   $sql->execute([
     htmlspecialchars($_POST['name']),
-    htmlspecialchars($_POST['password']
+    htmlspecialchars($_POST['password'])
   ]);
   foreach ($sql as $row) {
     $_SESSION['customer'] = [
@@ -47,7 +47,7 @@ if ($referer == "http://localhost/InQuirer/app/auth/login.php" && isset(htmlspec
     ];
   }
   header_notice();
-} elseif ($referer == "http://localhost/InQuirer/app/auth/register.php" && isset(htmlspecialchars($_POST['name']), htmlspecialchars($_POST['email']), htmlspecialchars($_POST['password']))) {
+} elseif ($referer == "http://localhost/InQuirer/app/auth/register.php" && isset($_POST['name'], $_POST['email'], $_POST['password'])) {
   // 新規登録処理
   $pdo = new PDO('mysql:host=localhost;dbname=inquirer;charset=utf8', 'soraisu', 'sprwAeixb26vds');
 

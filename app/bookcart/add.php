@@ -1,5 +1,5 @@
-<?php require '../../component/header/header.php'; ?>
-<?php require '../../component/pdo.php'; ?>
+<?php require '../../component/php/header/header.php'; ?>
+<?php require '../../component/php/pdo.php'; ?>
 <?php
 date_default_timezone_set('Asia/Tokyo');
 $nowdate = date("Y/m/d");
@@ -35,10 +35,10 @@ $cartid = htmlspecialchars($_POST['cartid']) ?? '';
     </div>
     <h6 class="mt-3">ブックカートに入っているもの</h6>
     <div class="row">
-      <?php require '../../component/book/bookcart.php'; ?>
+      <?php require '../../component/php/book/bookcart.php'; ?>
     </div>
   </div>
 <?php else : ?>
   <?php header('Location: http://localhost/InQuirer/app/auth/login.php'); ?>
 <?php endif; ?>
-<?php require '../../component/footer/footer.php'; ?>
+<?php require '../../component/php/footer/footer.php'; ?>

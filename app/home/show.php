@@ -1,5 +1,5 @@
-<?php require '../../component/header/header.php'; ?>
-<?php require '../../component/pdo.php'; ?>
+<?php require '../../component/php/header/header.php'; ?>
+<?php require '../../component/php/pdo.php'; ?>
 <?php
 $showid = htmlspecialchars($_POST['showid']);
 $show = $pdo->prepare('SELECT * FROM book WHERE id = ?');
@@ -55,4 +55,4 @@ $show->execute([$showid]);
     </div>
   <?php endforeach; ?>
 </div>
-<?php require '../../component/footer/footer.php'; ?>
+<?php require '../../component/php/footer/footer.php'; ?>
