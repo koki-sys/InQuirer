@@ -20,6 +20,9 @@
 `component/php/component.php`を開き
 その中にあるコードを`app/[folder]/[file].php`内に埋め込み、開発を進めてください。
 
+## バージョン
+v1.0 
+
 ## お問い合わせ
 追加してほしい機能、不具合などに関しましては以下の連絡先にお問い合わせください。<br>
 メールアドレス: soraisu7@gmail.com
