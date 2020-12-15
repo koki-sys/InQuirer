@@ -102,6 +102,7 @@ if ($referer == "http://localhost/InQuirer/app/auth/login.php" && isset($_POST['
     }
   } else {
     echo 'ログイン名が既に使用されていますので、変更してください。';
+    header_notice();
   }
 } else {
   header_notice();
