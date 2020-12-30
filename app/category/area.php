@@ -1,14 +1,14 @@
 <!-- areaテーブルからとる -->
 <?php require '../../component/php/header/header.php'; ?>
 <div class="container">
-  <h4>地域：
+    <h4>地域：
+        <?php
+        echo htmlspecialchars($_POST['area']);
+        ?>
+    </h4>
     <?php
-    echo htmlspecialchars($_POST['area']);
-    ?>
-  </h4>
-  <?php
 
-  /* 本番環境でしか使えない(ipから位置情報を取得)
+    /* 本番環境でしか使えない(ipから位置情報を取得)
   function grabIpInfo($ip)
   {
     $curl = curl_init();
@@ -25,14 +25,14 @@
   echo $ipJsonInfo->name;
   */
 
-  ?>
-  <div class="row">
-    <?php
-    require '../../component/php/pdo.php';
-    $sql = $pdo->prepare('SELECT * FROM book WHERE area_id = ?');
-    $sql->execute([htmlspecialchars($_POST['areaid'])]);
     ?>
-    <?php require '../../component/php/book/card.php'; ?>
-  </div>
+    <div class="row">
+        <?php
+        require '../../component/php/pdo.php';
+        $sql = $pdo->prepare('SELECT * FROM book WHERE area_id = ?');
+        $sql->execute([htmlspecialchars($_POST['areaid'])]);
+        ?>
+        <?php require '../../component/php/book/card.php'; ?>
+    </div>
 </div>
 <?php require '../../component/php/footer/footer.php'; ?>

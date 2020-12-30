@@ -2,9 +2,9 @@
 <?php require '../../component/php/pdo.php'; ?>
 <?php $sql = $pdo->query('SELECT * FROM book'); ?>
 <div class="container">
-  <h4>書籍一覧</h4>
-  <?php
-  /* 本番環境でしか使えないのでコメント化(ipアドレスから位置情報を取得)
+    <h4>書籍一覧</h4>
+    <?php
+    /* 本番環境でしか使えないのでコメント化(ipアドレスから位置情報を取得)
   function grabIpInfo($ip)
   {
     $curl = curl_init();
@@ -20,9 +20,9 @@
 
   echo $ipJsonInfo->name;
   */
-  ?>
-  <div class="row">
-    <?php require '../../component/php/book/card.php'; ?>
-  </div>
+    ?>
+    <div class="row">
+        <?php require '../../component/php/book/card.php'; ?>
+    </div>
 </div>
 <?php require '../../component/php/footer/footer.php'; ?>
