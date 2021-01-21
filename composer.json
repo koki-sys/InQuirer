@@ -1,6 +1,14 @@
 {
-  "require": {
-    "php": "~7.4",
-    "ext-mbstring": "*"
-  }
+    "name": "sorai/in-quirer",
+    "authors": [
+        {
+            "name": "koki-sys",
+            "email": "soraisu7@gmail.com"
+        }
+    ],
+    "require": {},
+	"require-dev": {
+        "phpunit/phpunit": "^9.5",
+        "phpunit/dbunit": "*"
+    }
 }

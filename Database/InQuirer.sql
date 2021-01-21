@@ -2,99 +2,99 @@ DROP DATABASE IF EXISTS inquirer;
 
 CREATE DATABASE inquirer DEFAULT CHARACTER
 SET
-  utf8 COLLATE utf8_general_ci;
+    utf8 COLLATE utf8_general_ci;
 
 GRANT ALL ON inquirer. * TO soraisu@localhost IDENTIFIED BY 'sprwAeixb26vds';
 
 use inquirer;
 
 CREATE TABLE customer (
-  id INT AUTO_INCREMENT PRIMARY KEY,
-  name VARCHAR (30) NOT NULL,
-  email CHAR (50) NOT NULL,
-  password VARCHAR (30) NOT NULL
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    name VARCHAR (30) NOT NULL,
+    email CHAR (50) NOT NULL,
+    password VARCHAR (30) NOT NULL
 );
 
 CREATE TABLE rental (
-  id INT AUTO_INCREMENT,
-  customer_id INT NOT NULL,
-  random VARCHAR(9) NOT NULL,
-  reserve_date DATE NOT NULL,
-  receipt_date DATE NOT NULL,
-  rental_flg INT NOT NULL DEFAULT 0,
-  receipt_library_id INT NOT NULL,
-  book_id INT NOT NULL,
-  PRIMARY KEY (id, customer_id)
+    id INT AUTO_INCREMENT,
+    customer_id INT NOT NULL,
+    random VARCHAR(9) NOT NULL,
+    reserve_date DATE NOT NULL,
+    receipt_date DATE NOT NULL,
+    rental_flg INT NOT NULL DEFAULT 0,
+    receipt_library_id INT NOT NULL,
+    book_id INT NOT NULL,
+    PRIMARY KEY (id, customer_id)
 );
 
 CREATE TABLE book (
-  id INT AUTO_INCREMENT PRIMARY KEY,
-  name CHAR (30) NOT NULL,
-  author VARCHAR (50) NOT NULL,
-  publisher VARCHAR (50) NOT NULL,
-  isbn CHAR (25) NOT NULL,
-  img VARCHAR (50) NOT NULL,
-  library_id INT NOT NULL,
-  area_id INT NOT NULL,
-  category_id INT NOT NULL
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    name CHAR (30) NOT NULL,
+    author VARCHAR (50) NOT NULL,
+    publisher VARCHAR (50) NOT NULL,
+    isbn CHAR (25) NOT NULL,
+    img VARCHAR (50) NOT NULL,
+    library_id INT NOT NULL,
+    area_id INT NOT NULL,
+    category_id INT NOT NULL
 );
 
 CREATE TABLE category (
-  id INT AUTO_INCREMENT PRIMARY KEY,
-  name CHAR (20) NOT NULL
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    name CHAR (20) NOT NULL
 );
 
 CREATE TABLE area (
-  id INT AUTO_INCREMENT PRIMARY KEY,
-  name CHAR (15) NOT NULL
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    name CHAR (15) NOT NULL
 );
 
 CREATE TABLE library (
-  id INT AUTO_INCREMENT PRIMARY KEY,
-  name CHAR (20) NOT NULL
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    name CHAR (20) NOT NULL
 );
 
 ALTER TABLE
-  rental
+    rental
 ADD
-  CONSTRAINT book_id foreign key(book_id) references book(id) on
+    CONSTRAINT book_id foreign key(book_id) references book(id) on
 delete
-  cascade on
+    cascade on
 update
-  cascade;
+    cascade;
 
 ALTER TABLE
-  rental
+    rental
 ADD
-  CONSTRAINT customer_id foreign key(customer_id) references customer(id) on
+    CONSTRAINT customer_id foreign key(customer_id) references customer(id) on
 delete
-  cascade on
+    cascade on
 update
-  cascade;
+    cascade;
 
 ALTER TABLE
-  book
+    book
 ADD
-  CONSTRAINT library_id foreign key(library_id) references library(id) on
+    CONSTRAINT library_id foreign key(library_id) references library(id) on
 delete
-  cascade on
+    cascade on
 update
-  cascade;
+    cascade;
 
 ALTER TABLE
-  book
+    book
 ADD
-  CONSTRAINT area_id foreign key(area_id) references area(id) on
+    CONSTRAINT area_id foreign key(area_id) references area(id) on
 delete
-  cascade on
+    cascade on
 update
-  cascade;
+    cascade;
 
 ALTER TABLE
-  book
+    book
 ADD
-  CONSTRAINT category_id foreign key(category_id) references category(id) on
+    CONSTRAINT category_id foreign key(category_id) references category(id) on
 delete
-  cascade on
+    cascade on
 update
-  cascade;
+    cascade;

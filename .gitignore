@@ -1,3 +1,6 @@
 *.log
 .vscode/*
 TODO*
+/vendor/
+phpunit.cmd
+.phpunit.*
